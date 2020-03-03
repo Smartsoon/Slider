@@ -1,27 +1,55 @@
-.slider {
-    margin: 0 auto;
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(300px, auto);
+    grid-auto-columns: minmax(500px, auto);
+    grid-gap: 20px;
 }
 
+.slider {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.uploader {
+    grid-column: 1/4;
+    justify-self: center;
+}
 .img-style {
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 100%;
+    border: 2px solid rgba(0,0,0,0.87);
+    border-radius: 10px;
 }
 
 .prev-style,
 .next-style {
-    background-color: #c4e8ff;
-    border: 1px solid rgba(100,130,108,0.71);
-    border-radius: 10px;
+    background-color: rgba(0,0,0,0.75);
+    border: 1px solid rgba(75,75,75,0.75);
+    border-radius: 5px 20px 20px 5px;
+    height: 100px;
+    width: 30px;
     cursor: pointer;
-    margin: 0 10px 0 10px;
+    color: rgba(225,225,225,0.8);
+}
+
+.prev-style {
+    border-radius: 20px 5px 5px 20px;
 }
 
 .prev-style:hover,
 .next-style:hover {
-    background-color: rgba(195,232,255,0.71);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.new-image {
+    background-color: rgba(203,203,203,0.54);
+    border: 1px solid rgba(75,75,75,0.75);
+    border-radius: 5px;
+}
+
+.upload-button {
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(225,225,225,1);
+    border: 1px solid rgba(75,75,75,0.75);
+    border-radius: 5px;
 }
