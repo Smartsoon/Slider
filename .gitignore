@@ -1,7 +1,7 @@
 # file: ~/.gitignore_global
 /workspace.xml
-./git
-./idea
+.git
+.idea
 /sass
 /prepros.config
 /img
