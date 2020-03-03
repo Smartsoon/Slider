@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 .wrapper {
     display: grid;
     grid-auto-rows: minmax(300px, auto);
@@ -9,6 +13,7 @@
     grid-column: 1/4;
     justify-self: center;
 }
+
 
 .uploader {
     grid-column: 1/4;
@@ -37,7 +42,8 @@
 }
 
 .prev-style:hover,
-.next-style:hover {
+.next-style:hover,
+.upload-button:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -52,4 +58,8 @@
     color: rgba(225,225,225,1);
     border: 1px solid rgba(75,75,75,0.75);
     border-radius: 5px;
+}
+
+[disabled] {
+    opacity: 0;
 }

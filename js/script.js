@@ -29,9 +29,15 @@ class Slider {
     }
 
     addImagesByLink() {
-        this.newImage = this.linkUploader.value;
-        this.array.push(this.newImage);
-        this.linkUploader.value = ''
+        if (this.linkUploader.value.length < 1)
+            return;
+        let ext = this.linkUploader.value.slice(-3);
+        console.log(ext);
+        if (ext === 'jpg') {
+            this.newImage = this.linkUploader.value;
+            this.array.push(this.newImage);
+            this.linkUploader.value = ''
+        }
     }
 
     add(arg) {
